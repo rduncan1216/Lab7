@@ -7,52 +7,48 @@
 
 public class Calculator implements ICalcOp {
 
-    private double num1;
-    private double num2;
-    private String operation = " ";
-    private double results = 0;
 
-    public Calculator(){
-        num1 = 0;
-        num2 = 0;
+    private String operation = " ";
+
+
+    public Calculator(String op){
+        operation = op;
     }
 
-    public Calculator(double a, double b){
-        num1 = a;
-        num2 = b;
+    public Calculator(){
+
     }
 
     @Override
-    public double addition(){
-        double sum = num1 + num2;
-        results = sum;
+    public float addition(float num1, float num2){
+        float sum = num1 + num2;
         operation = "ADDITION";
 
         return sum;
     }
 
     @Override
-    public double subtraction(){
-        double difference = num1 - num2;
-        results = difference;
+    public float subtraction(float num1, float num2){
+        float difference = num1 - num2;
+
         operation = "SUBTRACTION";
 
         return difference;
     }
 
     @Override
-    public double multiplication(){
-        double product = num1 * num2;
-        results = product;
+    public float multiplication(float num1, float num2){
+        float product = num1 * num2;
+
         operation = "MULTIPLICATION";
 
         return product;
     }
 
     @Override
-    public double division(){
-        double quotient = num1/num2;
-        results = quotient;
+    public float division(float num1, float num2){
+        float quotient = num1/num2;
+
         operation = "DIVISION";
 
         return quotient;
@@ -60,26 +56,14 @@ public class Calculator implements ICalcOp {
 
     @Override
     public String toString(){
-        return "First Number: " + num1 + "\nSecond Number: " + num2 + "\nResult: " + results + "\nOperation: " + operation;
+        return "Operation: " + operation;
     }
 
-    public void setNum1(double a){
-        num1 = a;
+    public void setOperation(String a){
+        operation = a;
     }
 
-    public void setNum2(double a){
-        num2 = a;
-    }
-
-    public double getNum1(){
-        return num1;
-    }
-
-    public double getNum2(){
-        return num2;
-    }
-
-    public double getResults(){
-        return results;
+    public String getOperation(){
+        return operation;
     }
 }

@@ -7,9 +7,9 @@
 
 public interface ICalcOp {
 
-    public double addition();
-    public double subtraction();
-    public double multiplication();
-    public double division();
+    public float addition(float a, float b);
+    public float subtraction(float a, float b);
+    public float multiplication(float a, float b);
+    public float division(float a, float b);
 
 }

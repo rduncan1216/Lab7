@@ -30,9 +30,9 @@ public class Main {
             if(choice == 0)
                 break;
             System.out.println("Please enter the first number:");
-            double number = sc.nextDouble();
+            float number = sc.nextFloat();
             System.out.println("Please enter the second number: ");
-            double number2 = sc.nextDouble();
+            float number2 = sc.nextFloat();
 
 
 
@@ -40,24 +40,24 @@ public class Main {
                 break;
             }
             else if (choice == 1) {
-                Calculator calc = new Calculator(number, number2);
+                Calculator calc = new Calculator();
                 System.out.println();
-                System.out.println(calc.addition());
+                System.out.println(calc.addition(number, number2));
             }
             else if (choice == 2){
-                Calculator calc = new Calculator(number, number2);
+                Calculator calc = new Calculator();
                 System.out.println();
-                System.out.println(calc.subtraction());
+                System.out.println(calc.subtraction(number, number2));
             }
             else if (choice == 3){
-                Calculator calc = new Calculator(number, number2);
+                Calculator calc = new Calculator();
                 System.out.println();
-                System.out.println(calc.multiplication());
+                System.out.println(calc.multiplication(number, number2));
             }
             else if (choice == 4){
-                Calculator calc = new Calculator(number, number2);
+                Calculator calc = new Calculator();
                 System.out.println();
-                System.out.println(calc.division());
+                System.out.println(calc.division(number, number2));
             }
         }while(choice != 0);
 
